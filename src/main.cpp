@@ -1,9 +1,29 @@
 #include <Arduino.h>
+#include <Servo.h>
+
+Servo myServo1;
+Servo myServo2; 
+
+int servo1 = 3;
+int servo2 = 5;
+int joyX = 11;
+int joyY = 12;
 
 void setup() {
-  // put your setup code here, to run once:
+  myServo1.attach(servo1);
+  myServo2.attach(servo2);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+int valX = analogRead(joyX);
+int valY = analogRead(joyY);
+
+valX = map(valX, 0, 1023, 10, 170);
+valY = map(valY, 0, 1023, 10, 170):
+
+myServo1.write(valX);
+myServo2.write(valY);
+
+delay(5);
 }
+  
