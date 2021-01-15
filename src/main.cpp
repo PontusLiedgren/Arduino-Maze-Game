@@ -19,7 +19,7 @@ int valX = analogRead(joyX);
 int valY = analogRead(joyY);
 
 valX = map(valX, 0, 1023, 10, 170);
-valY = map(valY, 0, 1023, 10, 170):
+valY = map(valY, 0, 1023, 10, 170);
 
 myServo1.write(valX);
 myServo2.write(valY);
