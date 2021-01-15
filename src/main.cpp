@@ -4,10 +4,10 @@
 Servo myServo1;
 Servo myServo2; 
 
-int servo1 = 3;
-int servo2 = 5;
-int joyX = 11;
-int joyY = 12;
+int servo1 = 9;
+int servo2 = 10;
+int joyX = A0;
+int joyY = A1;
 
 void setup() {
   myServo1.attach(servo1);
